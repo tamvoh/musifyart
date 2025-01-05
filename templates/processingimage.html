@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='processingimage.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+</head>
+<body>
+<header>
+    <div>
+        <nav>
+            <a href="/" class="navigation">HOME</a>
+        </nav>
+    </div>
+</header>
+
+    <header>
+        <h1 class="title">MUSIFY ART</h1>
+    </header>
+
+    <main>
+        <section class="color-display">
+            <p>
+                The main color in this image was {{ color_name }}.
+            </p>
+
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" style="max-width: 100%; max-height: 400px; object-fit: contain;">
+
+
+            {% if song_name %}
+            <section class="song-results">
+                <p><strong>Song Name:</strong> {{ song_name }}</p>
+                <p><strong>Artist Name:</strong> {{ artist_name }}</p>
+                <p><strong>Video Link:</strong> <a href="{{ video }}">{{ video }}</a></p>
+            </section>
+            {% endif %}
+        </section>
+    </main>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+<script type="text/javascript">
+    var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+    socket.on('table_data', function(data) {
+        if (data.error) {
+            alert(data.error);
+        } else {
+            var tableData = JSON.parse(data);
+            console.log("Received table data: ", tableData);
+            // You can dynamically render the table or song/video data as needed
+        }
+    });
+</script>
+
+
+</body>
+</html>

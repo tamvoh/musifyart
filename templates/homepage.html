@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBD</title>
+    <link rel="stylesheet" href="static/homepage.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/homepage.js') }}"></script>
+</head>
+<body>
+<header>
+    <div>
+        <nav>
+            <a href="/" class="navigation">HOME</a>
+        </nav>
+    </div>
+</header>
+
+    <header>
+        <h1 class="title">MUSIFY ART</h1>
+    </header>
+
+    <main>
+        <section class="error-message">
+            {% block header %}{% endblock header %}
+            {% for category, message in get_flashed_messages(with_categories=true) %}
+            <div class="flash {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </section>
+        <section class="project-description">
+            <p>
+                Using this website, you can turn a piece of art into a song!
+                Using the colours in the art, a song that matches the
+                emotions the artwork presents will be found.
+            </p>
+        </section>
+
+        <section class="upload-image">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <label for="file-upload" class="custom-file-upload">Choose File</label>
+                <input id="file-upload" name="file" type="file" accept="image/*">
+
+                <!-- Image Preview Container -->
+                <div id="imagePreviewContainer" style="display:none; margin-top: 10px;">
+                    <img id="blah" src="#" alt="your image" />
+                </div>
+
+                <!-- Styled submit button -->
+                <button class="submit-button" type="submit">Submit</button>
+            </form>
+
+        </section>
+    </main>
+<script>
+    // Ensure the DOM is fully loaded before attaching the event listener
+    document.addEventListener('DOMContentLoaded', function() {
+    const fileInput = document.getElementById('file-upload');
+    const imagePreview = document.getElementById('blah');
+    const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+
+    fileInput.onchange = function(evt) {
+        const [file] = fileInput.files;
+        if (file) {
+            imagePreview.src = URL.createObjectURL(file);  // Preview the selected image
+            imagePreviewContainer.style.display = 'block';  // Show the preview container
+        }
+    };
+});
+</script>
+</body>
+</html>
