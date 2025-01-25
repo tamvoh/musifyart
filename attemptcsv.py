@@ -16,7 +16,7 @@ app.secret_key = "W!red_were_the_eyes_of_@_horse_on_a_jet_pilot"
 
 # RGB values and rainbow colors
 rainbow_colors = [
-    (255, 0, 0), (242, 140, 40), (251, 211, 36), (147, 187, 31), (100,149,237), 
+    (255, 0, 0), (242, 140, 40), (220, 172, 60), (147, 187, 31), (100,149,237), 
     (75, 0, 130), (148, 0, 211), (255, 141, 161), (0, 0, 0), (255, 255, 255)
 ]
 
@@ -84,7 +84,7 @@ def get_color_name(color_value):
     color_names = {
         (255, 0, 0): "red",
         (242, 140, 40): "orange",
-        (251, 211, 36): "yellow",
+        (220, 172, 60): "yellow",
         (147, 187, 31): "green",
         # (8, 143, 143): "blue-green",
         (100,149,237): "blue",
@@ -114,7 +114,7 @@ def show_image(filename):
     urls = {
         (255, 0, 0): "red",
         (242, 140, 40): "orange",
-        (251, 211, 36): "yellow",
+        (220, 172, 60): "yellow",
         (147, 187, 31): "green",
         # (8, 143, 143): "blue-green",
         (100,149,237): "blue",
