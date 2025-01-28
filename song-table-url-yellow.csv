@@ -1,9 +1,10 @@
-﻿SONG,ARTIST,VID,GENRE,DECADE,Chords,#
+SONG,ARTIST,VID,GENRE,DECADE,Chords,#
+Twist And Shout,The Beatles,,Rock,1960s,"C, G, F",3
+Hound Dog,Elvis Presley,,Rock,1950s,"C, F, G",3
 Bad Moon Rising,Creedence Clearwater Revival,,Rock,1960s,"C, G, F",3
 Bossa Nova Baby,Elvis Presley,,Rock,1960s,"C, F, G",3
 Down On The Corner,Creedence Clearwater Revival,,Rock,1960s,"C, G, F",3
 Honky Tonk Women,The Rolling Stones,,Rock,1960s,"C, F, G",3
-Hound Dog,Elvis Presley,,Rock,1950s,"C, F, G",3
 Imagine,John Lennon,,Rock,1970s,"C, F, G",3
 I Really Don't Want To Know,Elvis Presley,,Folk,1970s,"C, F, G",3
 I Walk The Line,Johnny Cash,,Rock,1950s,"G, C, F",3
@@ -15,7 +16,6 @@ Shilo,Neil Diamond,,Pop,1960s,"C, F, G",3
 Spanish Harlem,Aretha Franklin,,Soul,1970s,"C, F, G",3
 Spanish Harlem,Ben E. King,,Pop,1960s,"C, F, G",3
 The Last Time,The Rolling Stones,,Rock,1960s,"G, F, C",3
-Twist And Shout,The Beatles,,Rock,1960s,"C, G, F",3
 Way down,Elvis Presley,,Rock,1970s,"C, F, G",3
 All Apologies,Nirvana,,Rock,1990s,"C, F, G",3
 American Idiot,Green Day,,Rock,2000s,"G, C, F",3
